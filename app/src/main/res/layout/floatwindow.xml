@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:padding="2dp">
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="vertical">
+
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="240dp"
+			android:id="@+id/floatwindow_note"
+			android:background="#FFFFFFFF"
+			android:visibility="visible">
+
+			<LinearLayout
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:orientation="vertical">
+
+				<LinearLayout
+					android:layout_height="wrap_content"
+					android:layout_width="match_parent"
+					android:orientation="horizontal"
+					android:background="#FFA9A9A9">
+
+					<LinearLayout
+						android:layout_height="match_parent"
+						android:layout_width="match_parent"
+						android:orientation="horizontal"
+						android:layout_weight="1"
+						android:gravity="left">
+
+						<ImageView
+							android:layout_height="wrap_content"
+							android:layout_width="wrap_content"
+							android:src="@drawable/ic_cancel"
+							android:id="@+id/floatwindow_cancel"
+							android:visibility="gone"/>
+
+						<ImageView
+							android:layout_height="wrap_content"
+							android:layout_width="wrap_content"
+							android:src="@drawable/ic_done"
+							android:id="@+id/floatwindow_done"
+							android:visibility="gone"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_height="match_parent"
+						android:layout_width="match_parent"
+						android:orientation="horizontal"
+						android:layout_weight="1"
+						android:id="@+id/floatwindow_websearch"
+						android:visibility="gone">
+
+						<EditText
+							android:layout_height="30dp"
+							android:layout_width="match_parent"
+							android:background="@null"
+							android:hint="请输入搜索内容"
+							android:textSize="10sp"
+							android:id="@+id/floatwindow_search"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_height="match_parent"
+						android:layout_width="match_parent"
+						android:orientation="horizontal"
+						android:gravity="right"
+						android:layout_weight="1">
+
+						<ImageView
+							android:layout_height="wrap_content"
+							android:layout_width="wrap_content"
+							android:src="@drawable/ic_close"
+							android:id="@+id/floatwindow_close"/>
+
+						<ImageView
+							android:layout_height="wrap_content"
+							android:layout_width="wrap_content"
+							android:src="@drawable/ic_focus"
+							android:id="@+id/floatwindow_focus"/>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_height="176dp"
+					android:layout_width="match_parent"
+					android:orientation="horizontal"
+					android:background="#FFC0C0C0">
+
+					<LinearLayout
+						android:layout_height="match_parent"
+						android:layout_width="match_parent"
+						android:orientation="vertical"
+						android:id="@+id/floatwindow_default">
+
+						<android.support.v4.view.ViewPager
+							android:id="@+id/floatwindow_container"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_height="match_parent"
+						android:layout_width="match_parent"
+						android:orientation="vertical"
+						android:id="@+id/floatwindow_webs"
+						android:visibility="gone">
+
+						<android.support.v4.widget.SwipeRefreshLayout
+							android:id="@+id/floatwindow_wsr"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent">
+
+							<RelativeLayout
+								android:layout_height="match_parent"
+								android:layout_width="match_parent">
+
+								<WebView
+									android:layout_height="match_parent"
+									android:layout_width="match_parent"
+									android:id="@+id/floatwindow_webview"/>
+
+								<ProgressBar
+									android:id="@+id/floatwindow_progressbar"
+									style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+									android:layout_width="match_parent"
+									android:layout_height="wrap_content"
+									android:max="100"/>
+
+							</RelativeLayout>
+
+						</android.support.v4.widget.SwipeRefreshLayout>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_height="wrap_content"
+					android:layout_width="match_parent"
+					android:orientation="horizontal"
+					android:background="#FFA9A9A9">
+
+					<LinearLayout
+						android:layout_height="match_parent"
+						android:layout_width="match_parent"
+						android:orientation="horizontal"
+						android:layout_weight="1">
+
+						<ImageView
+							android:layout_height="wrap_content"
+							android:layout_width="wrap_content"
+							android:src="@drawable/ic_web"
+							android:id="@+id/floatwindow_web"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_height="match_parent"
+						android:layout_width="match_parent"
+						android:orientation="horizontal"
+						android:layout_weight="1"
+						android:gravity="center"
+						android:id="@+id/floatwindow_webtool"
+						android:visibility="gone">
+
+						<ImageView
+							android:layout_height="wrap_content"
+							android:layout_width="wrap_content"
+							android:src="@drawable/ic_chevron_double_left"
+							android:id="@+id/floatwindow_goback"/>
+
+						<ImageView
+							android:layout_height="wrap_content"
+							android:layout_width="wrap_content"
+							android:src="@drawable/ic_bank"
+							android:id="@+id/floatwindow_home"/>
+
+						<ImageView
+							android:layout_height="wrap_content"
+							android:layout_width="wrap_content"
+							android:src="@drawable/ic_chevron_double_right"
+							android:id="@+id/floatwindow_goforward"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_height="match_parent"
+						android:layout_width="match_parent"
+						android:orientation="horizontal"
+						android:layout_weight="1"
+						android:gravity="right">
+
+						<ImageView
+							android:layout_height="wrap_content"
+							android:layout_width="wrap_content"
+							android:src="@drawable/ic_menu"
+							android:id="@+id/floatwindow_move"/>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+		</FrameLayout>
+
+	</LinearLayout>
+
+	<ImageView
+		android:layout_height="32dp"
+		android:layout_width="32dp"
+		android:src="@drawable/ic_launcher"
+		android:id="@+id/floatwindow_icon"/>
+
+</FrameLayout>
+

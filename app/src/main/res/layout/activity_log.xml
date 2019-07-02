@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	tools:context=".LogActivity">
+
+	<android.support.design.widget.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:theme="@style/AppTheme.AppBarOverlay">
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="24dp"/>
+
+		<android.support.v7.widget.Toolbar
+			android:id="@+id/log_toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			android:background="?attr/colorPrimary"
+			app:layout_scrollFlags="scroll"
+			app:subtitleTextColor="#FFFFFF"
+			app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+	</android.support.design.widget.AppBarLayout>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+		<ScrollView
+			android:id="@+id/logScrollView"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_above="@+id/textCmd"
+			android:layout_below="@id/log_toolbar"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentTop="true">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+
+				<TextView
+					android:id="@+id/logTextView"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:ellipsize="none"
+					android:editable="true"
+					android:singleLine="false"/>
+
+			</LinearLayout>
+
+		</ScrollView>
+
+		<EditText
+			android:id="@+id/textCmd"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignLeft="@+id/logScrollView"
+			android:layout_alignParentBottom="true"
+			android:layout_toLeftOf="@+id/runCommand"
+			android:ems="10">
+
+			<requestFocus/>
+
+		</EditText>
+
+		<Button
+			android:id="@+id/runCommand"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignBaseline="@+id/textCmd"
+			android:layout_alignBottom="@+id/textCmd"
+			android:layout_alignRight="@+id/logScrollView"
+			android:text="@string/btn_console_send"/>
+
+	</RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

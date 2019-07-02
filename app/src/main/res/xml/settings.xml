@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<PreferenceCategory android:title="软件">
+		
+		<Preference
+			android:key="php"
+			android:title="替换PHP"
+			android:summary="替换php版本"/>
+
+		<SwitchPreference
+			android:enabled="false"
+			android:defaultValue="false"
+			android:key="crash"
+			android:title="崩溃日志上传"
+			android:summary="崩溃日志自动上传至网络（包括手机配置信息）"/>
+
+		<Preference
+			android:key="update"
+			android:title="检查更新"
+			android:summary="检查是否有新版本发布"/>
+
+	</PreferenceCategory>
+
+	<PreferenceCategory android:title="其它">
+
+		<Preference
+			android:key="opensource"
+			android:title="开源项目"
+			android:summary="软件所使用的开源包"/>
+
+		<Preference
+			android:key="about"
+			android:title="软件关于"
+			android:summary="关于这个软件及开发者"/>
+
+	</PreferenceCategory>
+
+</PreferenceScreen>
+
+

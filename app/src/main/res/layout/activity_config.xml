@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	tools:context=".WhitelistActivity">
+
+	<android.support.design.widget.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:theme="@style/AppTheme.AppBarOverlay">
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="24dp"/>
+
+		<android.support.v7.widget.Toolbar
+			android:id="@+id/config_toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			android:background="?attr/colorPrimary"
+			app:layout_scrollFlags="scroll"
+			app:subtitleTextColor="#FFFFFF"
+			app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+	</android.support.design.widget.AppBarLayout>
+
+	<LinearLayout
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:orientation="vertical"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+	<include
+		layout="@layout/config"/>
+
+	<RelativeLayout
+		android:background="#eee"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="3dp">
+
+		<Button
+			android:id="@+id/config_save"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_alignParentTop="true"
+			android:layout_weight="1"
+			android:text="@string/config_save"/>
+
+		<Button
+			android:id="@+id/config_cancel"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			android:layout_toLeftOf="@+id/config_save"
+			android:text="@string/config_cancel"/>
+
+		<CheckBox
+			android:id="@+id/config_advanced"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignBottom="@+id/config_cancel"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentTop="true"
+			android:layout_centerVertical="true"
+			android:layout_toLeftOf="@+id/config_cancel"
+			android:text="@string/config_advanced"/>
+
+	</RelativeLayout>
+
+</LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	tools:context=".PluginsActivity">
+
+	<android.support.design.widget.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:theme="@style/AppTheme.AppBarOverlay">
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="24dp"/>
+
+		<android.support.v7.widget.Toolbar
+			android:id="@+id/category_toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			android:background="?attr/colorPrimary"
+			app:layout_scrollFlags="scroll"
+			app:subtitleTextColor="#FFFFFF"
+			app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+	</android.support.design.widget.AppBarLayout>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="#CCCCCC"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+		<com.astuetz.PagerSlidingTabStrip
+			android:id="@+id/plugins_tabs"
+			android:layout_width="match_parent"
+			android:layout_height="48dip"
+			android:background="@drawable/background_tabs" />
+
+		<android.support.v4.view.ViewPager
+			android:id="@+id/plugins_pager"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/plugins_tabs" />
+
+	</RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

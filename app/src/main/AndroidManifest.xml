@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.pocketmine.server">
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <!-- uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" // -->
+
+    <application
+        android:configChanges="keyboardHidden|orientation"
+        android:icon="@drawable/ic_launcher"
+		android:theme="@style/AppTheme"
+        android:label="@string/application_name" >
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/activity_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".About"
+            android:label="关于PocketMine"/>
+        <activity
+            android:name=".InstallActivity"
+            android:label="@string/title_activity_install"/>
+        <activity
+            android:name=".FileManagerActivity"
+            android:label="@string/title_activity_file_manager"/>
+        <activity
+            android:name=".VersionManagerActivity"
+            android:label="@string/title_activity_version_manager"/>
+        <service
+            android:name=".ServerService"
+            android:icon="@drawable/ic_launcher"
+            android:label="Server Service"/>
+        <activity
+            android:name=".LogActivity"
+            android:label="@string/title_activity_log"/>
+        <activity
+            android:name=".ConfigActivity"
+            android:label="@string/title_activity_config"/>
+        <activity
+            android:name=".WhitelistActivity"
+            android:label="@string/title_activity_whitelist"/>
+		<activity
+			android:name=".ConfigurationActivity"
+			android:label="pocketmine.yml文件编辑"/>
+		<activity
+			android:name=".SettingActivity"
+			android:label="设置"/>
+		<service android:name=".FloatWindowService" />
+	</application>
+</manifest>
